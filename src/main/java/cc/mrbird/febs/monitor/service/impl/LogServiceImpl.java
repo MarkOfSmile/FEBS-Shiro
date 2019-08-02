@@ -100,14 +100,14 @@ public class LogServiceImpl extends ServiceImpl<LogMapper, Log> implements ILogS
         save(log);
     }
 
-    private StringBuilder handleParams(StringBuilder params, Object[] args, List paramNames) throws JsonProcessingException {
+    private StringBuilder handleParams(StringBuilder params, Object[] args, List<?> paramNames) throws JsonProcessingException {
         for (int i = 0; i < args.length; i++) {
             if (args[i] instanceof Map) {
-                Set set = ((Map) args[i]).keySet();
+                Set<?> set = ((Map<?, ?>) args[i]).keySet();
                 List<Object> list = new ArrayList<>();
                 List<Object> paramList = new ArrayList<>();
                 for (Object key : set) {
-                    list.add(((Map) args[i]).get(key));
+                    list.add(((Map<?, ?>) args[i]).get(key));
                     paramList.add(key);
                 }
                 return handleParams(params, list.toArray(), paramList);
