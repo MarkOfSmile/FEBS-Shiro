@@ -85,6 +85,12 @@ public class ViewController {
     public String map() {
         return FebsUtil.view("others/map/gaodeMap");
     }
+    
+    @GetMapping("music")
+    @RequiresPermissions("music:view")
+    public String music() {
+        return FebsUtil.view("others/music/musicMap");
+    }
 
     @GetMapping("eximport")
     @RequiresPermissions("others:eximport:view")

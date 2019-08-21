@@ -4,7 +4,6 @@ package cc.mrbird.febs.common.utils;
 import cc.mrbird.febs.common.entity.FebsConstant;
 import cc.mrbird.febs.system.entity.User;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 
@@ -18,7 +17,7 @@ import java.util.stream.IntStream;
  *
  * @author MrBird
  */
-@Slf4j
+
 public class FebsUtil {
 
     /**
@@ -92,6 +91,7 @@ public class FebsUtil {
     }
 
     public static String view(String viewName) {
+    	System.out.println( FebsConstant.VIEW_PREFIX + viewName);
         return FebsConstant.VIEW_PREFIX + viewName;
     }
 }

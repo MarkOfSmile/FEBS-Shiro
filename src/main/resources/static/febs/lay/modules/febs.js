@@ -569,6 +569,7 @@ layui.extend({
 
     // 文件下载
     self.download = function (url, params, fileName) {
+    	console.log("11111111111111111111")
         self.view.loadBar.start();
         url += '?' + parseParams(params);
         var xhr = new XMLHttpRequest();

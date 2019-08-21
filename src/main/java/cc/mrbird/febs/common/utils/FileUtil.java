@@ -2,7 +2,6 @@ package cc.mrbird.febs.common.utils;
 
 import cc.mrbird.febs.common.entity.FebsConstant;
 import com.google.common.base.Preconditions;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
@@ -17,7 +16,7 @@ import java.util.zip.ZipOutputStream;
 /**
  * @author MrBird
  */
-@Slf4j
+
 public class FileUtil {
 
     private static final int BUFFER = 1024 * 8;

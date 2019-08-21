@@ -70,6 +70,7 @@
                 </div>
                 <div class="layui-card-footer">
                     <button class="layui-btn" id="submit">保存</button>
+                    <button class="layui-btn" id="submiting">保存2</button>
                 </div>
             </div>
         </div>
@@ -96,6 +97,7 @@
             $query = $view.find('#query'),
             $reset = $view.find('#reset'),
             $submit = $view.find('#submit'),
+            $submiting = $view.find('#submiting'),
             $searchForm = $view.find('#role-table-form'),
             $header = $view.find('#form-header'),
             tableIns;
@@ -211,7 +213,13 @@
         });
 
         $submit.on('click', function () {
+        	console.dir("in ------$submit.on('click', function ()--------");
+            $view.find('#submit-form').trigger('click');           
+        });
+        $submiting.on('click', function () {
+        	console.dir("in ------$submit.on('click', function ()--------");
             $view.find('#submit-form').trigger('click');
+            
         });
 
         function initTable() {
@@ -244,6 +252,7 @@
         }
 
         form.on('submit(role-form-submit)', function (data) {
+        	console.dir("in ----form.on('submit(role-form-submit)', function (data) ------")
             var selected = menuTree.getChecked(false, true);
             var menuIds = [];
             layui.each(selected, function (key, item) {
@@ -268,6 +277,7 @@
         }
 
         var addOrUpdateRole = function (data) {
+        	console.dir("in addOrUpdateRole");
             if (data.roleId && $header.text() === '修改角色') {
                 febs.post(ctx + 'role/update', data, function () {
                     febs.alert.success('修改角色成功');
