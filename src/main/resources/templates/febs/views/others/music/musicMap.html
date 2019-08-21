@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>清爽简单的HTML5音乐播放器演示_dowebok</title>
+    <link rel="stylesheet" href="febs/css/solid.css">
+    <link rel="stylesheet" href="febs/css/fontawesome.css" >
+    <link rel="stylesheet" href="febs/css/style.css" > 
+</head>
+
+<body>
+    <div id="dowebok">
+        <div id="bg-artwork"></div>
+        <div id="bg-layer"></div>
+        <div id="player">
+            <div id="player-track">
+                <div id="album-name"></div>
+                <div id="track-name"></div>
+                <div id="track-time">
+                    <div id="current-time"></div>
+                    <div id="track-length"></div>
+                </div>
+                <div id="s-area">
+                    <div id="ins-time"></div>
+                    <div id="s-hover"></div>
+                    <div id="seek-bar"></div>
+                </div>
+            </div>
+            <div id="player-content">
+                <div id="album-art">
+                 <img src="febs/images/musicImages/1.jpg" class="active" id="_1">
+                <img src="febs/images/musicImages/2.jpg" id="_2">
+                <img src="febs/images/musicImages/3.jpg" id="_3">
+                <img src="febs/images/musicImages/4.jpg" id="_4">
+                <img src="febs/images/musicImages/5.jpg" id="_5"> 
+                <div id="buffer-box">加载中...</div>
+                </div>
+                <div id="player-controls">
+                    <div class="control">
+                        <div class="button" id="play-previous">
+                            <i class="fas fa-backward"></i>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="button" id="play-pause-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="button" id="play-next">
+                            <i class="fas fa-forward"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ <script src="layui/jquery.min.js"></script>
+<script src="layui/index.js"></script>
+</body>
+
+</html>
